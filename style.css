@@ -234,15 +234,27 @@ nav.show ul.grid {
 }
 
 /* toggle menu */
-nav .icon-close{
+.toggle {
+  color: var(--base-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+nav .icon-close {
   visibility: hidden;
   opacity: 0;
+
   position: absolute;
+  top: -1.5rem;
   right: 1.5rem;
+
+  transition: 0.2s;
 }
-nav.show div.icon-close{
+
+nav.show div.icon-close {
   visibility: visible;
   opacity: 1;
+  top: 1.5rem;
 }
 
 /*====  HOME ============================ */
@@ -256,6 +268,8 @@ nav.show div.icon-close{
 
 #home .image {
   position: relative;
+  top: 8.3%;
+  
 }
 
 #home .image::before {
@@ -272,6 +286,8 @@ nav.show div.icon-close{
 #home .image img {
   position: relative;
   right: 2.93rem;
+  
+ 
 }
 
 #home .image img,
@@ -291,4 +307,42 @@ nav.show div.icon-close{
 
 #home .text p {
   margin-bottom: 2rem;
+}
+
+/*====  ABOUT ============================ */
+#about {
+  background: white;
+}
+
+#about .container {
+  margin: 0;
+}
+
+#about .image {
+  position: relative;
+}
+
+#about .image::before {
+  content: '';
+  height: 100%;
+  width: 100%;
+  background: var(--base-color-second);
+  position: absolute;
+  top: -8.3%;
+  left: -33%;
+  z-index: 0;
+}
+
+#about .image img {
+  position: relative;
+}
+
+#about .image img,
+#about .image::before {
+  border-radius: 0.25rem;
+}
+
+#about .text {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
 }
