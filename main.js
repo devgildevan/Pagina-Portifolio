@@ -18,6 +18,24 @@ const links = document.querySelectorAll(' nav ul li a')
     }
     
 
+/* Mudar o header da página quando o scroll */
+const header = document.querySelector('#header')
+const navHeigth = header.offseHeigth
+
+window.addEventListener('scroll', function ( {
+    if (window.scrollY >= navHeigth) {
+
+        header.classList.add('scroll')
+    } else{
+
+        header.classList.remove('scroll')
+    }
+})
+
+
+
+
+
 
 
 
