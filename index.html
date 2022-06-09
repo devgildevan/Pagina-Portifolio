@@ -7,6 +7,10 @@
 
     <!-- Icons -->
     <link rel="stylesheet" href="./assets/style.css" />
+
+     <!-- Swiper -->
+     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    
     <!-- STYLES -->
     <link rel="stylesheet" href="./style.css" />
 
@@ -18,6 +22,7 @@
       rel="stylesheet"
       s
     />
+   
   </head>
   <body>
     <header id="header">
@@ -29,7 +34,7 @@
             <li><a class="title" href="#home">Inicio</a></li>
             <li><a class="title" href="#about">Sobre</a></li>
             <li><a class="title" href="#services">Serviços</a></li>
-            <li><a class="title" href="#testmonials">Depoimentos</a></li>
+            <li><a class="title" href="#testimonials">Depoimentos</a></li>
             <li><a class="title" href="#contact">Contatos</a></li>
           </ul>
         </div>
@@ -40,6 +45,7 @@
     </header>
 
     <main>
+
       <!-- HOME -->
       <section class="section" id="home">
         <div class="container grid">
@@ -68,6 +74,7 @@
           <div class="image" > 
             <img src="https://images.unsplash.com/photo-1559599101-f09722fb4948?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80"
              alt="tres mulheres com mateirais de cabeleleiras">
+
           </div>
           <div class="text">
             <h2 class="title">Sobre nós</h2>
@@ -146,9 +153,114 @@
           </div>
         </div>
       </section>
+
+      <div class="divider-1"></div>
+       
+     
+          <!-- TESTIMONIALS -->
+          <section class="section" id="testimonials">
+            <div class="container ">
+              <header>
+                <h2 class="title">Depoimentos de quem já passou por aqui</h2>
+              </header>
+              <div class="testimonials swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="testimonial swiper-slide">
+                    <blockquote>
+                      <p>
+                        <span>&ldquo;</span>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Rerum blanditiis saepe nam excepturi explicabo ipsa error
+                        ipsam neque
+                      </p>
+                      <cite>
+                        <img
+                          src="https://randomuser.me/api/portraits/women/44.jpg"
+                          alt="Foto de Wanessa Souza"
+                        />
+                        Wanessa Souza
+                      </cite>
+                    </blockquote>
+                  </div>
+    
+                  <div class="testimonial swiper-slide">
+                    <blockquote>
+                      <p>
+                        <span>&ldquo;</span>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Rerum blanditiis saepe nam excepturi explicabo ipsa error
+                        ipsam neque
+                      </p>
+                      <cite>
+                        <img
+                          src="https://randomuser.me/api/portraits/women/88.jpg"
+                          alt="Foto de Franciele Venega"
+                        />
+                        Franciele Venega
+                      </cite>
+                    </blockquote>
+                  </div>
+    
+                  <div class="testimonial swiper-slide">
+                    <blockquote>
+                      <p>
+                        <span>&ldquo;</span>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Rerum blanditiis saepe nam excepturi explicabo ipsa error
+                        ipsam neque
+                      </p>
+                      <cite>
+                        <img
+                          src="https://randomuser.me/api/portraits/women/57.jpg"
+                          alt="Fotos de Valeska Fabris"
+                        />
+                        Valeska Fabris
+                      </cite>
+                    </blockquote>
+                  </div>
+                </div>
+    
+                 <div class="swiper-pagination"></div>
+                 
+            </div>
+          </section>
+
+          <div class="divider-2"></div>
+
+      <!-- CONTACT-->
+      <section class="section" id="contact">
+        <div class="container grid">
+
+          <div class="text">
+            <h2 class="title">Entre em contato com a gente!</h2>
+            <p>Entre em contato com a Beautysalon, queremos tirar suas duvidas, ouvir suas críticas e sugestões.</p>
+            <a href="https://api.whatsapp.com/send?phone=+5585991986645&text=Oi! Gostaria de trabalhar com você." class="button" target="_blank"><i class="icon-whatsapp"> </i>Entrar em contato</a>
+          </div>
+
+          <div class="links">
+            <ul class="grid">
+              <li><i class="icon-phone"></i>85 99198-6645</li>
+              <li><i class="icon-map-pin"></i>Rua machado de assis, 247</li>
+              <li><i class="icon-mail"></i>gildevan.dev.ads@gmail.com</li>
+            </ul>
+          </div>
+
+
+
+
+
+
+        </div>
+      </section>
+
       
     </main>
+    <!-- Scroll-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- Swiper -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     
-    <script src="main.js"></script>
+
+    <script src="./main.js"></script>
   </body>
 </html>

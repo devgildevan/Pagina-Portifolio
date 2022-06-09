@@ -18,25 +18,52 @@ const links = document.querySelectorAll(' nav ul li a')
     }
     
 
-/* Mudar o header da página quando o scroll */
+/* mudar o header da página quando der scroll */
 const header = document.querySelector('#header')
-const navHeigth = header.offseHeigth
+const navHeight = header.offsetHeight
 
-window.addEventListener('scroll', function ( {
-    if (window.scrollY >= navHeigth) {
+function changeHeaderWhenScroll() {
+  if (window.scrollY >= navHeight) {
+    // scroll é maior que a altura do header
+    header.classList.add('scroll')
+  } else {
+    // menor que a altura do header
+    header.classList.remove('scroll')
+  }
+}
 
-        header.classList.add('scroll')
-    } else{
+//Testimonials carosel slider swiper
 
-        header.classList.remove('scroll')
+const swiper = new Swiper ('.swiper-container',{
+  slidesPerView: 1,
+  paginataion: {
+    el: '.swiper-pagination'
+  },
+  mousewheell: true,
+  Keyboard: true,
+  breakpoints: {
+    767: {
+      slidesPerView: 2,
+      setWrapperSize: true
     }
+  }
 })
 
+/* Scrollrevil*/
+const scrollReveal = ScrollReveal({
+  origin:'top',
+  distance:'30px',
+  duration: 700,
+  reset: true
+})
 
-
-
-
-
-
+scrollReveal.reveal(
+  `#home .image, #home .text,
+  #about .image, #about .text,
+  #services header, #services .card,
+  #testimonials header, #testimonials .testimonials
+  #contact .text, #contact .links`,
+  {interval: 100}
+  )
 
 
