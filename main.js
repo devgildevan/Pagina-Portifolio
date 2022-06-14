@@ -9,6 +9,7 @@ for ( const element of toggle) {
 }
 
 /*Quando clicar em um item do menu, esconder o menu */ 
+  
 const links = document.querySelectorAll(' nav ul li a')
 
     for (const link of links) {
@@ -19,6 +20,7 @@ const links = document.querySelectorAll(' nav ul li a')
     
 
 /* mudar o header da página quando der scroll */
+
 const header = document.querySelector('#header')
 const navHeight = header.offsetHeight
 
@@ -62,8 +64,18 @@ scrollReveal.reveal(
   #about .image, #about .text,
   #services header, #services .card,
   #testimonials header, #testimonials .testimonials
-  #contact .text, #contact .links`,
+  #contact .text, #contact .links
+  footer .band, footer .social, 
+  footer .logo, footer p`,
   {interval: 100}
   )
 
-
+/* back to top*/
+ const backToTopButton = document.querySelector('.back-to-top')
+  window.addEventListener('scroll', function () {
+    if (window.scrollY >= 560) {
+      backToTopButton.classList.add( 'show')
+    } else {
+      backToTopButton.classList.remove("show")
+    }
+  })
