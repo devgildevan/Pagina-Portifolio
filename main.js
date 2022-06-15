@@ -36,13 +36,13 @@ function changeHeaderWhenScroll() {
 
 //Testimonials carosel slider swiper
 
-const swiper = new Swiper ('.swiper-container',{
+const swiper = new Swiper('.swiper-container', {
   slidesPerView: 1,
-  paginataion: {
+  pagination: {
     el: '.swiper-pagination'
   },
-  mousewheell: true,
-  Keyboard: true,
+  mousewheel: true,
+  keyboard: true,
   breakpoints: {
     767: {
       slidesPerView: 2,
@@ -64,9 +64,10 @@ scrollReveal.reveal(
   #about .image, #about .text,
   #services header, #services .card,
   #testimonials header, #testimonials .testimonials
-  #contact .text, #contact .links
+  #contact .text, #contact .links,
   footer .band, footer .social, 
-  footer .logo, footer p`,
+  footer .logo, footer p
+  `,
   {interval: 100}
   )
 
@@ -78,4 +79,26 @@ scrollReveal.reveal(
     } else {
       backToTopButton.classList.remove("show")
     }
+  })
+
+  /*Menu ativo conforme selecionar  a seção é selecionada*/
+  const sections = document.querySelectorAll('section[id]')
+  function ativarOMenuNaSencao(){
+
+  const checkpoint = window.pageYOffset + (window.innerHeight / 8) * 4
+    for ( const section of section) {
+      const sectionTop = section.offsetTop
+      const sectionHeight = section.offsetHeight
+      const section = section.getAttribute('id')
+
+    }
+
+  }
+
+  /*====  when Scroll ===*/
+  window.addEventListener('scroll', function (){
+    changeHeaderWhenScroll()
+    backToTopButton()
+    ativarOMenuNaSencao()
+    
   })
