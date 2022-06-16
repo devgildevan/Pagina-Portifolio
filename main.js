@@ -82,23 +82,34 @@ scrollReveal.reveal(
   })
 
   /*Menu ativo conforme selecionar  a seção é selecionada*/
-  const sections = document.querySelectorAll('section[id]')
+  const sections = document.querySelectorAll('main section[id]')
   function ativarOMenuNaSencao(){
-
   const checkpoint = window.pageYOffset + (window.innerHeight / 8) * 4
-    for ( const section of section) {
+
+    for ( const section of sections) {
       const sectionTop = section.offsetTop
       const sectionHeight = section.offsetHeight
-      const section = section.getAttribute('id')
+      const sectionid = section.getAttribute('id')
 
+      const checkpointStart = checkpoint >= sectionTop
+      const checkpointEnd = checkpoint <= sectionTop + sectionHeight
+
+    if (checkpointStart && checkpointEnd){  
+      document
+      .querySelector ('nav ul li a[href *=' + sectionId + '] ')
+      .classList.add('active') 
+
+      } else {
+        document
+        .querySelector('nav ul li a [href *=' + sectionId + ']')
+        .classList.remove('active')
+      }
     }
-
   }
 
   /*====  when Scroll ===*/
-  window.addEventListener('scroll', function (){
+  window.addEventListener('scroll', function () {
     changeHeaderWhenScroll()
     backToTopButton()
     ativarOMenuNaSencao()
-    
   })

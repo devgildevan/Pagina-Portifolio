@@ -185,8 +185,10 @@ nav ul li a {
 }
 
 nav ul li a:hover,
-nav ul li a.active {
+nav ul li a.active{
   color: var(--base-color);
+ 
+ 
 }
 
 nav ul li a::after {
@@ -194,7 +196,7 @@ nav ul li a::after {
   width: 0%;
   height: 2px;
   background: var(--base-color);
-
+ 
   position: absolute;
   left: 0;
   bottom: -1.5rem;
@@ -203,8 +205,9 @@ nav ul li a::after {
 }
 
 nav ul li a:hover::after,
-nav ul li a.active::after {
+nav ul li a.active::after{
   width: 100%;
+  
 }
 
 nav .menu {
@@ -575,6 +578,7 @@ footer .social  a:hover{
     height:3.125rem ;
     
   }
+  /*=== navegation== */
   
   nav .menu{
     opacity: 1;
@@ -585,12 +589,20 @@ footer .social  a:hover{
 
   nav .menu ul{
     display: flex;
-    gap: 2rem;
+    gap: 2rem; 
 
   }
   nav .menu ul li a.title{
     font: 400 1rem var(--body-font);
+    -webkit-font-smoothing: antialiased;
   }
+
+  nav .menu ul li a.title.active{
+    font-weight: bold;
+    -webkit-font-smoorhing:auto;
+  }
+
+
   nav .icon-menu {
     display: none;
   }
