@@ -342,8 +342,8 @@ nav.show div.icon-close {
   width: 100%;
   background: var(--base-color-second);
   position: absolute;
-  top: -8.3%;
-  left: -33%;
+  top: -20.3%;
+  left: -23%;
   z-index: 0;
 }
 
@@ -367,11 +367,18 @@ nav.show div.icon-close {
   grid: 1.5rem;
 }
 .card {
+  /* background-color: red; */
   padding: 3.625rem  2rem;
   box-shadow: 0px 0px 12px rgba(0,0,0, 0.08);
   border-bottom:.25rem solid var(--base-color) ;
   border-radius:.25rem .25rem 0 0 ;
   text-align: center;
+ box-shadow: rgba(49, 47, 47, 0.08);
+ transition: all 200ms ease;
+ cursor: pointer;
+}
+.card:hover{
+  box-shadow: none;
 }
 .card i{
   display: block;
@@ -631,8 +638,9 @@ footer .social  a:hover{
   /* ==== about====  */
   #about .container{
     margin: var(--header-height);
-    justify-content: space-between;
+    justify-content:space-between;
     grid-auto-flow: column;
+    margin: 0 auto;
    
    
 
